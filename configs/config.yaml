@@ -1,0 +1,8 @@
+# It contains all the configs required in the project
+
+artifacts:
+  artifacts_dir: artifacts
+  input_path: input
+  prediction_path: prediction
+  font_file: simfang.ttf
+  prediction_file: prediction.png
