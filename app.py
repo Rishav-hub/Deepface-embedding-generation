@@ -1,5 +1,5 @@
 from distutils.log import debug
-from embedgen.component.parser import DocParser
+from embedgen.component.embed import Embedding
 
 from typing import Optional
 from flask import Flask, request
@@ -7,15 +7,14 @@ app = Flask(__name__)
 
 
 # Take input as image path and give json response
-@app.route('/via_postman', methods=["GET", 'POST'])
+@app.route('/embedding', methods=["GET", 'POST'])
 def image_response():
     if request.method == "POST":
         # get input as image path
         image_path = request.json["image_path"]
-        language = request.json["language"]
-        doc_parser = DocParser(str(image_path), language)
-        encoded_image, result = doc_parser.getOcrPrediction()
-        response =  {"result": result, "image": encoded_image}
+        embedding_generator = Embedding(str(image_path))
+        embeddings = embedding_generator.getOcrPrediction()
+        response =  {"embeddings": embeddings}
         return response
 
 if __name__ == '__main__':

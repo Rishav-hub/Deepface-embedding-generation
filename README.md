@@ -1,28 +1,26 @@
-# Document scanner
+# 📙 DeepFace Embedding Generator
 
-## STEPS -
 
-### STEP 01- Create a repository by using template repository
+## 💿 Installing
 
-### STEP 02- Clone the new repository
-
-### STEP 03- Create a conda environment after opening the repository in VSCODE
-
-```bash
-conda create --prefix ./env python=3.7 -y
-```
-
-```bash
+#### 1. Environment setup.
+```commandline
+conda create --prefix ./env python=3.8 -y
 conda activate ./env
 ```
-OR
-```bash
-source activate ./env
-```
 
-### STEP 04- install the requirements
-```bash
+#### 2. Install Requirements
+```commandline
 pip install -r requirements.txt
 ```
 
-### STEP 06- commit and push the changes to the remote repository
+#### 3. Run the setup
+```commandline
+pip install -e .
+```
+
+#### 5. Run Application
+windows
+```commandline
+python app.py 
+```
