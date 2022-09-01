@@ -1,5 +1,5 @@
 from distutils.log import debug
-from doc_parser.component.parser import DocParser
+from embedgen.component.parser import DocParser
 
 from typing import Optional
 from flask import Flask, request

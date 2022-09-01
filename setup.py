@@ -4,9 +4,9 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
 ## edit below variables as per your requirements -
-REPO_NAME = "Document_parser"
+REPO_NAME = "Deepface-embedding-generation"
 AUTHOR_USER_NAME = "Rishav-hub"
-SRC_REPO = "doc_parser"
+SRC_REPO = "embedgen"
 LIST_OF_REQUIREMENTS = []
 
 
