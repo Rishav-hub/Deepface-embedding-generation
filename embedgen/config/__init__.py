@@ -8,15 +8,15 @@ from embedgen.exception import DocumentException
 class Configuration:
     def __init__(self):
         try:
-            config = read_yaml(r"configs\config.yaml")
+            config = read_yaml(os.path.join("configs", "config.yaml"))
 
             artifacts = config['artifacts']
-            # KEY_TOKEN = config['KEY_TOKEN']
 
             self.artifacts_dir = artifacts['artifacts_dir']
             self.input_path = artifacts['input_path']
-            self.prediction_path = artifacts['prediction_path']
-            self.font_file = artifacts['font_file']
-            self.prediction_file = artifacts['prediction_file']
+            self.input_file = artifacts['input_file']
+            self.detector_backend = artifacts['detector_backend']
+            self.embedding_model = artifacts['embedding_model']
+            self.target_size = artifacts['target_size']
         except Exception as e:
             raise DocumentException(e, sys) from e

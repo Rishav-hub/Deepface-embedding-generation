@@ -1,7 +1,6 @@
-FROM python:3.8
-COPY . /documen_parser
-WORKDIR /documen_parser
-RUN python --version
+FROM python:3.8-slim-buster
+COPY . /deepface_embedding
+WORKDIR /deepface_embedding
 RUN pip install --upgrade pip
 RUN apt-get update
 RUN apt-get install ffmpeg libsm6 libxext6  -y

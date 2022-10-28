@@ -953,3 +953,435 @@ AttributeError: 'Request' object has no attribute 'files'
 [2022-09-01 22:54:45,566: INFO: _internal]:  * Debugger PIN: 140-193-923
 [2022-09-01 22:55:54,382: INFO: common]: yaml file: configs\config.yaml loaded successfully
 [2022-09-01 22:55:58,852: INFO: _internal]: 127.0.0.1 - - [01/Sep/2022 22:55:58] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:41:07,025: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-02 12:41:07,025: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-02 12:41:07,027: INFO: _internal]:  * Restarting with stat
+[2022-09-02 12:41:09,862: WARNING: _internal]:  * Debugger is active!
+[2022-09-02 12:41:09,868: INFO: _internal]:  * Debugger PIN: 140-193-923
+[2022-09-02 12:41:10,850: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:41:17,440: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:41:17] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:43:22,679: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:43:50,090: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:43:50] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:44:07,227: INFO: _internal]: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2022-09-02 12:44:07,227: INFO: _internal]: [33mPress CTRL+C to quit[0m
+[2022-09-02 12:44:07,228: INFO: _internal]:  * Restarting with stat
+[2022-09-02 12:44:09,982: WARNING: _internal]:  * Debugger is active!
+[2022-09-02 12:44:09,987: INFO: _internal]:  * Debugger PIN: 140-193-923
+[2022-09-02 12:44:18,387: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:44:22,735: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:44:22] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:45:53,003: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:45:53,478: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:45:53] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:45:56,752: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:45:57,201: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:45:57] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:45:58,060: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:45:58,532: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:45:58] "POST /embedding HTTP/1.1" 200 -
+[2022-09-02 12:45:59,156: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-09-02 12:45:59,614: INFO: _internal]: 127.0.0.1 - - [02/Sep/2022 12:45:59] "POST /embedding HTTP/1.1" 200 -
+[2022-10-28 16:52:19,649: INFO: server]: Started server process [70568]
+[2022-10-28 16:52:19,650: INFO: on]: Waiting for application startup.
+[2022-10-28 16:52:19,650: INFO: on]: Application startup complete.
+[2022-10-28 16:52:19,651: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 16:52:26,559: INFO: server]: Shutting down
+[2022-10-28 16:52:26,669: INFO: on]: Waiting for application shutdown.
+[2022-10-28 16:52:26,670: INFO: on]: Application shutdown complete.
+[2022-10-28 16:52:26,671: INFO: server]: Finished server process [70568]
+[2022-10-28 16:52:33,928: INFO: server]: Started server process [36560]
+[2022-10-28 16:52:33,928: INFO: on]: Waiting for application startup.
+[2022-10-28 16:52:33,929: INFO: on]: Application startup complete.
+[2022-10-28 16:52:33,929: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 16:52:53,868: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 16:52:53,899: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\embedgen\component\embed.py", line 38, in generate_embedding
+    face = DeepFace.detectFace(img_path = self.image_path,
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\DeepFace.py", line 819, in detectFace
+    img = functions.preprocess_face(img = img_path, target_size = target_size, detector_backend = detector_backend
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\commons\functions.py", line 175, in preprocess_face
+    img = load_image(img)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\commons\functions.py", line 77, in load_image
+    elif len(img) > 11 and img.startswith("http"):
+TypeError: startswith first arg must be bytes or a tuple of bytes, not str
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 29, in image_response
+    embeddings = embedding_generator.generate_embedding()
+  File "D:\Deepface-embedding-generation\embedgen\component\embed.py", line 49, in generate_embedding
+    raise DocumentException(e, sys) from e
+embedgen.exception.DocumentException: 
+        Error occured in script: 
+        [ D:\Deepface-embedding-generation\embedgen\component\embed.py ] at 
+        try block line number: [38] and exception block line number: [49] 
+        error message: [startswith first arg must be bytes or a tuple of bytes, not str]
+        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "app.py", line 33, in image_response
+    return JSONResponse(content = {"error": e.__str__}, status_code=500)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 190, in render
+    return json.dumps(
+  File "D:\Deepface-embedding-generation\env\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type method is not JSON serializable
+[2022-10-28 16:53:16,215: INFO: server]: Shutting down
+[2022-10-28 16:53:16,324: INFO: on]: Waiting for application shutdown.
+[2022-10-28 16:53:16,324: INFO: on]: Application shutdown complete.
+[2022-10-28 16:53:16,324: INFO: server]: Finished server process [36560]
+[2022-10-28 16:53:31,308: INFO: server]: Started server process [4956]
+[2022-10-28 16:53:31,310: INFO: on]: Waiting for application startup.
+[2022-10-28 16:53:31,311: INFO: on]: Application startup complete.
+[2022-10-28 16:53:31,312: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 16:54:19,806: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 17:51:32,060: INFO: server]: Started server process [77400]
+[2022-10-28 17:51:32,061: INFO: on]: Waiting for application startup.
+[2022-10-28 17:51:32,061: INFO: on]: Application startup complete.
+[2022-10-28 17:51:32,061: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 17:51:35,783: INFO: server]: Shutting down
+[2022-10-28 17:51:35,891: INFO: on]: Waiting for application shutdown.
+[2022-10-28 17:51:35,891: INFO: on]: Application shutdown complete.
+[2022-10-28 17:51:35,892: INFO: server]: Finished server process [77400]
+[2022-10-28 17:51:45,520: INFO: server]: Started server process [77200]
+[2022-10-28 17:51:45,522: INFO: on]: Waiting for application startup.
+[2022-10-28 17:51:45,523: INFO: on]: Application startup complete.
+[2022-10-28 17:51:45,524: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 17:52:07,863: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:12:54,508: INFO: server]: Started server process [80244]
+[2022-10-28 18:12:54,510: INFO: on]: Waiting for application startup.
+[2022-10-28 18:12:54,511: INFO: on]: Application startup complete.
+[2022-10-28 18:12:54,512: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:13:13,222: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:15:22,047: INFO: server]: Started server process [13384]
+[2022-10-28 18:15:22,048: INFO: on]: Waiting for application startup.
+[2022-10-28 18:15:22,050: INFO: on]: Application startup complete.
+[2022-10-28 18:15:22,051: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:16:20,700: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:17:04,507: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 39, in generate_embedding
+    face = DeepFace.detectFace(img_path = input_image_array,
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\DeepFace.py", line 819, in detectFace
+    img = functions.preprocess_face(img = img_path, target_size = target_size, detector_backend = detector_backend
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\commons\functions.py", line 200, in preprocess_face
+    factor_0 = target_size[0] / img.shape[0]
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\app.py", line 29, in image_response
+    embeddings = embedding_generator.generate_embedding()
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 50, in generate_embedding
+    raise DocumentException(e, sys) from e
+embedgen.exception.DocumentException: 
+        Error occured in script: 
+        [ d:\Deepface-embedding-generation\embedgen\component\embed.py ] at 
+        try block line number: [39] and exception block line number: [50] 
+        error message: [unsupported operand type(s) for /: 'str' and 'int']
+        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "d:\Deepface-embedding-generation\app.py", line 33, in image_response
+    return JSONResponse(content = {"error": e.__str__}, status_code=500)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 190, in render
+    return json.dumps(
+  File "D:\Deepface-embedding-generation\env\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type method is not JSON serializable
+[2022-10-28 18:31:01,574: INFO: server]: Started server process [85228]
+[2022-10-28 18:31:01,575: INFO: on]: Waiting for application startup.
+[2022-10-28 18:31:01,576: INFO: on]: Application startup complete.
+[2022-10-28 18:31:01,578: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:31:45,530: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:32:17,740: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 39, in generate_embedding
+    face = DeepFace.detectFace(img_path = input_image_array,
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\DeepFace.py", line 819, in detectFace
+    img = functions.preprocess_face(img = img_path, target_size = target_size, detector_backend = detector_backend
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\commons\functions.py", line 200, in preprocess_face
+    factor_0 = target_size[0] / img.shape[0]
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\app.py", line 29, in image_response
+    embeddings = embedding_generator.generate_embedding()
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 50, in generate_embedding
+    raise DocumentException(e, sys) from e
+embedgen.exception.DocumentException: 
+        Error occured in script: 
+        [ d:\Deepface-embedding-generation\embedgen\component\embed.py ] at 
+        try block line number: [39] and exception block line number: [50] 
+        error message: [unsupported operand type(s) for /: 'str' and 'int']
+        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "d:\Deepface-embedding-generation\app.py", line 34, in image_response
+    return JSONResponse(content = {"error": e.__str__}, status_code=500)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 190, in render
+    return json.dumps(
+  File "D:\Deepface-embedding-generation\env\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type method is not JSON serializable
+[2022-10-28 18:32:27,305: INFO: server]: Started server process [84468]
+[2022-10-28 18:32:27,306: INFO: on]: Waiting for application startup.
+[2022-10-28 18:32:27,307: INFO: on]: Application startup complete.
+[2022-10-28 18:32:27,308: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:32:38,965: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:34:20,167: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 39, in generate_embedding
+    face = DeepFace.detectFace(img_path = input_image_array,
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\DeepFace.py", line 819, in detectFace
+    img = functions.preprocess_face(img = img_path, target_size = target_size, detector_backend = detector_backend
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\deepface\commons\functions.py", line 200, in preprocess_face
+    factor_0 = target_size[0] / img.shape[0]
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\Deepface-embedding-generation\app.py", line 29, in image_response
+    embeddings = embedding_generator.generate_embedding()
+  File "d:\Deepface-embedding-generation\embedgen\component\embed.py", line 50, in generate_embedding
+    raise DocumentException(e, sys) from e
+embedgen.exception.DocumentException: 
+        Error occured in script: 
+        [ d:\Deepface-embedding-generation\embedgen\component\embed.py ] at 
+        try block line number: [39] and exception block line number: [50] 
+        error message: [unsupported operand type(s) for /: 'str' and 'int']
+        
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "d:\Deepface-embedding-generation\app.py", line 34, in image_response
+    return JSONResponse(content = {"error": e.__str__}, status_code=500)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\responses.py", line 190, in render
+    return json.dumps(
+  File "D:\Deepface-embedding-generation\env\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "D:\Deepface-embedding-generation\env\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type method is not JSON serializable
+[2022-10-28 18:34:57,047: INFO: server]: Started server process [82236]
+[2022-10-28 18:34:57,049: INFO: on]: Waiting for application startup.
+[2022-10-28 18:34:57,050: INFO: on]: Application startup complete.
+[2022-10-28 18:34:57,051: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:35:54,699: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:41:31,113: INFO: server]: Started server process [82840]
+[2022-10-28 18:41:31,114: INFO: on]: Waiting for application startup.
+[2022-10-28 18:41:31,115: INFO: on]: Application startup complete.
+[2022-10-28 18:41:31,116: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:43:25,780: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:44:20,785: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:44:49,654: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:45:06,875: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:45:21,224: INFO: server]: Started server process [58976]
+[2022-10-28 18:45:21,225: INFO: on]: Waiting for application startup.
+[2022-10-28 18:45:21,226: INFO: on]: Application startup complete.
+[2022-10-28 18:45:21,228: INFO: server]: Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+[2022-10-28 18:45:27,329: INFO: common]: yaml file: configs\config.yaml loaded successfully
+[2022-10-28 18:45:44,067: ERROR: h11_impl]: Exception in ASGI application
+Traceback (most recent call last):
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 231, in app
+    raw_response = await run_endpoint_function(
+  File "D:\Deepface-embedding-generation\env\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "d:\Deepface-embedding-generation\app.py", line 17, in image_response
+    response =  JSONResponse(content = {"embeddings": embeddings[ads]}, status_code=200)
+NameError: name 'ads' is not defined

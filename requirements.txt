@@ -1,13 +1,14 @@
 ### dependency
-tqdm
-pandas
-numpy
-PyYAML
+tqdm==4.64.1
+pandas==1.5.1
+numpy==1.23.4
+PyYAML==6.0
 
 ### local packages -
 # -e . # << uncomment this to install from setup.py
 ## Project package
-Flask>=1.1.2
-flask-cors
+fastapi==0.83.0
+uvicorn==0.18.3
+python-multipart==0.0.5
 requests==2.22.0
 deepface==0.0.75
