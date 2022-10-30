@@ -23,3 +23,4 @@ This document describes how to manually deploy the application to Google Cloud P
 5. Set the port which would be needed to be exposed.
 6. Click on "Deploy".
 3. You can access the application at the URL that is displayed in the output of the previous command.
+4. <img width="799" alt="image" src="https://user-images.githubusercontent.com/57321948/198875305-19b2c238-2a09-4c82-89be-f66b61cc9706.png">
