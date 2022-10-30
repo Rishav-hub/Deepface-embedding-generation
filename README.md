@@ -25,14 +25,16 @@ python app.py
 ```
 
 # API
-<img width="493" alt="image" src="https://user-images.githubusercontent.com/57321948/188079566-c5a69745-422d-458c-9bc4-e8146b653236.png">
-<img width="466" alt="image" src="https://user-images.githubusercontent.com/57321948/188079597-4a4a3c89-ae91-4d42-bcb8-715a72742507.png">
+<img width="831" alt="image" src="https://user-images.githubusercontent.com/57321948/198875358-4319ee30-3db4-4587-811b-938b8d1647df.png">
+<img width="846" alt="image" src="https://user-images.githubusercontent.com/57321948/198875368-2ccbed58-071a-4c05-917c-af7f6fbfa666.png">
 
 # 🔧 Built with 
-- Flask
+- FastAPI
 - Python 3.8
 - Postman
 - OpenCV
+- Google Cloud Run
+- Google Artifacts Registry
 
 # 🏦 Industrial Use Cases
 - Access Control
@@ -44,4 +46,4 @@ python app.py
 - Law Enforcement
 
 # ✌️Conclusion
-We have shown how to build a component of a face recognition pipeline. 
+We have shown how to build and Deployed a component of a Face Recognition pipeline. 
