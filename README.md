@@ -1,5 +1,5 @@
 # 📙 DeepFace Embedding Generator
-Generating embedding from face is one of the important task in a Face Recognition and Verification projects. Here we have used MTCNN for face detection and FaceNet archietecture for generating face embedding. It is a API based application that takes input as image path and would give response as an embedding list. This feature can be intergrated in a large scale projects.
+Generating embedding from face is one of the important task in a Face Recognition and Verification projects. Here we have used MTCNN for face detection and FaceNet archietecture for generating face embedding. It is a API based application that takes input as image path and would give response as an embedding list. This feature can be intergrated in a large scale projects. We have Deployed the application in Google Cloud Platform using Cloud Run and Artifacts Registry.
 
 ## 💿 Installing
 #### 1. Environment setup.
